@@ -20,11 +20,11 @@ messageTwo.textContent = ''
 
 messageTwo.textContent = ''
 
-fetch(`http://localhost:3000/weather?address=${location}`).then((response)=>{
+fetch(`/weather?address=${location}`).then((response)=>{
     response.json().then((data) => {
         console.log(data)
         if(data.error){
-             messageOne.textContent = 'Unable to find location. Please try again.'
+             messageOne.textContent = 'Unable to find location  . Please try again.'
            return messageTwo.textContent = ''
 
         } else {
